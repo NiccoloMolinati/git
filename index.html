@@ -3,16 +3,16 @@
     <title>Simo post generator</title>
     <meta charset="utf-8">
     <script>
-        var intro = ["Raga oggi ", "POrca troia l'altro giorno ", "Raga letteralmente ", "Boh comunque assurdo ", "No vabbe ", "Vi giuro "]
-        var place = ["al bandera ", "dalla psicologa ", "a casa di Giosu ", "sulla gialla ", "stanotte ho sognato che ", "appena successo: "]
-        var agent = ["il padre della lucy ", "ho visto un post in cui uno ", "mute ", "un tipo che assomigliava un botto ad Ave Marius ", "la viki ", "karl "]
-        var fact = ["diceva di conoscere dani. ", "ha detto 'papus minus'. ", "ha tirato una scoreggia assurda. ", "ha detto che non sa chi sia il Gabibbo. ", "mi fa che mi ama. ", "mi ha chiesto chi sia Gio Faz. "]
-        var cons = ["La gente non sta bene", "Lo dirò all'Alessandra", "Che voglia di formaggio cazzooo", "Molly ti odio giuro", "Guardati le spalle @TeoLigori", "Chi cazzo c'è stase?"]
-        var respo = ["Eccoci", "Booooh", "Grande", "Bro giuro", "Non c'ha senso", "Pooo"]
+        var intro = ["Raga oggi ", "POrca troia l'altro giorno ", "Raga letteralmente ", "Boh comunque assurdo ", "No vabbe ", "Vi giuro ", "Raga booo "]
+        var place = ["al bandera ", "dalla psicologa ", "a casa di Giosu ", "sulla gialla ", "stanotte ho sognato che ", "appena successo: ", "ieri al gaga "]
+        var agent = ["il padre della lucy ", "ho visto un post in cui uno ", "mute ", "un tipo che assomigliava un botto ad Ave Marius ", "la viki ", "karl ", "tadde "]
+        var fact = ["diceva di conoscere dani. ", "ha detto 'papus minus'. ", "ha tirato una scoreggia assurda. ", "ha detto che non sa chi sia il Gabibbo. ", "mi fa che mi ama. ", "mi ha chiesto chi sia Gio Faz. ", "mi ha passato un tiro di malvagia. "]
+        var cons = ["La gente non sta bene", "Lo dirò all'Alessandra", "Che voglia di formaggio cazzooo", "Molly ti odio giuro", "Guardati le spalle @TeoLigori", "Chi cazzo c'è stase?", "Tocca seghino"]
+        var respo = ["Eccoci", "Booooh", "Grande", "Bro giuro", "Non c'ha senso", "Pooo", "daje"]
         function gen(){
             document.getElementById("button").style.animation="press 0.3s";
-            document.getElementById("simo").value = intro[Math.floor(Math.random()*6)]+place[Math.floor(Math.random()*6)]+agent[Math.floor(Math.random()*6)]+fact[Math.floor(Math.random()*6)]+cons[Math.floor(Math.random()*6)]
-            document.getElementById("leo").value= respo[Math.floor(Math.random()*6)]
+            document.getElementById("simo").value = intro[Math.floor(Math.random()*7)]+place[Math.floor(Math.random()*7)]+agent[Math.floor(Math.random()*7)]+fact[Math.floor(Math.random()*7)]+cons[Math.floor(Math.random()*7)]
+            document.getElementById("leo").value= respo[Math.floor(Math.random()*7)]
         }
     </script>
     <style>
