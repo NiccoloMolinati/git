@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<head>
+    <title>Simo post generator</title>
+    <meta charset="utf-8">
+    <script>
+        var intro = ["Raga oggi ", "POrca troia l'altro giorno ", "Raga letteralmente ", "Boh comunque assurdo "]
+        var place = ["al bandera ", "dalla psicologa ", "a casa di Giosu ", "sulla gialla "]
+        var agent = ["il padre della lucy ", "ho visto un post in cui uno ", "mute ", "un tipo che assomigliava un botto ad Ave Marius "]
+        var fact = ["diceva di conoscere dani. ", "ha detto 'papus minus'. ", "ha tirato una scoreggia assurda. ", "ha detto che non sa chi sia il Gabibbo. "]
+        var cons = ["La gente non sta bene", "Lo dirò all'Alessandra", "Che voglia di formaggio cazzooo", "Molly ti odio giuro"]
+        var respo = ["Eccoci", "Booooh", "Grande", "Bro giuro"]
+        function gen(){
+            document.getElementById("button").style.animation="press 0.3s";
+            document.getElementById("simo").value = intro[Math.floor(Math.random()*4)]+place[Math.floor(Math.random()*4)]+agent[Math.floor(Math.random()*4)]+fact[Math.floor(Math.random()*4)]+cons[Math.floor(Math.random()*4)]
+            document.getElementById("leo").value= respo[Math.floor(Math.random()*4)]
+        }
+    </script>
+    <style>
+        body{
+            background-color: darkkhaki;
+        }
+        h1{
+            height: 15%;
+            color: rgb(85, 82, 49);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: absolute;
+            left: 37%;
+            top: 15%;
+        }
+        .generate {
+            position: absolute;
+            left:44%;
+            top: 27%;
+            border-radius: 50%; 
+            width: 150px;
+            height: 150px;
+            border: none;
+            color: white;
+            font-family: Avenir, Arial, sans-serif;
+            font-weight: 900;
+            font-size: 900;
+            background: red;
+            text-shadow: 0 3px 1px rgba(122,17,8,.8);
+            box-shadow: 0 8px 0 rgb(183,9,0), 
+                0 15px 20px rgba(0,0,0,.35);
+            text-transform: uppercase;
+            outline: none; 
+            cursor: pointer;
+            text-align: center;
+        }
+        button span { position: relative; }
+        
+        .output{
+            position: absolute;
+            left:20%;
+            top: 57%;
+            height:18%;
+            width: 27%;
+        }
+        .lab{margin: 1%;}
+        .simo{
+            height:80%;
+            width: 80%;
+            text-wrap: pretty;
+        }
+        .Leo{
+            position: absolute;
+            left: 21%;
+            top: 75%;
+        }
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        @keyframes press{
+            to{border-radius: 50%;
+            top: 28%;
+            width: 150px;
+            height: 150px;
+            border: none;
+            color: white;
+            font-family: Avenir, Arial, sans-serif;
+            font-weight: 900;
+            font-size: 900;
+            background: rgb(183,9,0);
+            text-transform: uppercase;
+            outline: none; 
+            cursor: pointer;
+            text-align: center;
+            box-shadow: 0px 0px 0px;}
+        }
+    </style>
+    <body>
+        <div class="maindiv">
+            <h1>Generate a post from Simo</h1>
+            <button id="button" class="generate" name="generate" onclick="gen()"><span>generate!</span></button>
+            <div class="output">
+                <p class="lab">Simo:</p>
+                    <textarea class="simo" id="simo" type="text"></textarea>
+            </div>
+            <div class="Leo">
+                <p>Leo:<input id="leo" type="text"></p>
+            </div>
+        </div>
+    </body>
+</head>
